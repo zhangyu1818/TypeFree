@@ -300,16 +300,31 @@ struct OnboardingPermissionsView: View {
 
         switch permissions[currentPermissionIndex].type {
         case .microphone:
-            AVCaptureDevice.requestAccess(for: .audio) { granted in
-                DispatchQueue.main.async {
-                    permissionStates[currentPermissionIndex] = granted
-                    if granted {
-                        withAnimation {
-                            showAnimation = true
+            let status = AVCaptureDevice.authorizationStatus(for: .audio)
+            switch status {
+            case .authorized:
+                permissionStates[currentPermissionIndex] = true
+                withAnimation {
+                    showAnimation = true
+                }
+            case .notDetermined:
+                AVCaptureDevice.requestAccess(for: .audio) { granted in
+                    DispatchQueue.main.async {
+                        self.permissionStates[self.currentPermissionIndex] = granted
+                        if granted {
+                            withAnimation {
+                                self.showAnimation = true
+                            }
+                            self.audioDeviceManager.loadAvailableDevices()
                         }
-                        audioDeviceManager.loadAvailableDevices()
                     }
                 }
+            case .denied, .restricted:
+                if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Microphone") {
+                    NSWorkspace.shared.open(url)
+                }
+            @unknown default:
+                break
             }
 
         case .audioDeviceSelection:
@@ -347,7 +362,15 @@ struct OnboardingPermissionsView: View {
 
         case .accessibility:
             let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true]
-            AXIsProcessTrustedWithOptions(options)
+            let isTrusted = AXIsProcessTrustedWithOptions(options)
+            
+            if !isTrusted {
+                // If not trusted, open System Settings as a fallback/helper
+                // The prompt might appear, but if it doesn't (or user previously denied), this helps.
+                if let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility") {
+                    NSWorkspace.shared.open(url)
+                }
+            }
 
             // Start checking for permission status
             Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
@@ -399,7 +422,7 @@ struct OnboardingPermissionsView: View {
         }
     }
 
-    private func getButtonTitle() -> String {
+    private func getButtonTitle() -> LocalizedStringKey {
         switch permissions[currentPermissionIndex].type {
         case .keyboardShortcut:
             permissionStates[currentPermissionIndex] ? "Continue" : "Set Shortcut"
@@ -412,7 +435,7 @@ struct OnboardingPermissionsView: View {
 
     @ViewBuilder
     private func styledPicker<T: Hashable>(
-        label: String,
+        label: LocalizedStringKey,
         selectedValue: T,
         displayValue: String,
         options: [T],

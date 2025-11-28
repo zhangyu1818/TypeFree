@@ -32,5 +32,9 @@
 	</array>
 	<key>NSScreenCaptureUsageDescription</key>
 	<string>TypeFree needs screen recording access to understand context from your screen for improved transcription accuracy.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>TypeFree needs microphone access to capture your voice for transcription.</string>
+	<key>NSAccessibilityUsageDescription</key>
+	<string>TypeFree needs accessibility access to insert text into other applications.</string>
 </dict>
 </plist>

@@ -366,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 26;
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.zhangyu.typefree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 26;
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.zhangyu.typefree;
 				PRODUCT_NAME = "$(TARGET_NAME)";

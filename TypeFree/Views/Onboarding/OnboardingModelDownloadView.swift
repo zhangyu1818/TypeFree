@@ -64,7 +64,7 @@ struct OnboardingModelDownloadView: View {
                             Text(turboModel.displayName)
                                 .font(.headline)
                                 .foregroundColor(.white)
-                            Text("\(turboModel.size) • \(turboModel.language)")
+                            Group { Text(turboModel.size)+Text(" • ")+Text(turboModel.language) }
                                 .font(.caption)
                                 .foregroundColor(.white.opacity(0.7))
                         }
@@ -185,7 +185,7 @@ struct OnboardingModelDownloadView: View {
         }
     }
 
-    private func getButtonTitle() -> String {
+    private func getButtonTitle() -> LocalizedStringKey {
         if isModelSet {
             "Continue"
         } else if isDownloading {
@@ -197,7 +197,7 @@ struct OnboardingModelDownloadView: View {
         }
     }
 
-    private func performanceIndicator(label: String, value: Double) -> some View {
+    private func performanceIndicator(label: LocalizedStringKey, value: Double) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
                 .font(.caption)

@@ -111,10 +111,10 @@ struct OnboardingView: View {
 
 struct TypewriterRoles: View {
     private let roles = [
-        "Your Writing Assistant",
-        "Your Vibe-Coding Assistant",
-        "Works Everywhere on Mac with a click",
-        "100% offline & private",
+        NSLocalizedString("Your Writing Assistant", comment: ""),
+        NSLocalizedString("Your Vibe-Coding Assistant", comment: ""),
+        NSLocalizedString("Works Everywhere on Mac with a click", comment: ""),
+        NSLocalizedString("100% offline & private", comment: ""),
     ]
 
     @State private var displayedText = ""
@@ -232,7 +232,7 @@ struct TypewriterRoles: View {
 }
 
 struct SkipButton: View {
-    let text: String
+    let text: LocalizedStringKey
     let action: () -> Void
 
     var body: some View {

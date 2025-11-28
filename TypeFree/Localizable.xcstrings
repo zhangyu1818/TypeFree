@@ -11,6 +11,16 @@
         }
       }
     },
+    " • ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " • "
+          }
+        }
+      }
+    },
     "-": {
       "localizations": {
         "zh-Hans": {
@@ -43,22 +53,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "「%1$@...」+%2$lld"
-          }
-        }
-      }
-    },
-    "%@ • %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "new",
-            "value": "%1$@ • %2$@"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%1$@ • %2$@"
           }
         }
       }
@@ -169,6 +163,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "30 天"
+          }
+        }
+      }
+    },
+    "100% offline & private": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "100% 离线且私密"
           }
         }
       }
@@ -1043,6 +1047,16 @@
         }
       }
     },
+    "Click the text area on the right": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击右侧的文本区域"
+          }
+        }
+      }
+    },
     "Clipboard Context": {
       "localizations": {
         "zh-Hans": {
@@ -1119,6 +1133,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "上下文感知"
+          }
+        }
+      }
+    },
+    "Continue": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续"
           }
         }
       }
@@ -1623,6 +1647,16 @@
         }
       }
     },
+    "Download Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下载模型"
+          }
+        }
+      }
+    },
     "Downloaded": {
       "localizations": {
         "zh-Hans": {
@@ -1749,6 +1783,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "使用中的表情符号"
+          }
+        }
+      }
+    },
+    "Enable Access": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用访问权限"
           }
         }
       }
@@ -2513,6 +2557,16 @@
         }
       }
     },
+    "Microphone:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "麦克风:"
+          }
+        }
+      }
+    },
     "Model": {
       "localizations": {
         "zh-Hans": {
@@ -3099,6 +3153,26 @@
         }
       }
     },
+    "Press your shortcut key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按下您的快捷键"
+          }
+        }
+      }
+    },
+    "Press your shortcut key again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次按下您的快捷键"
+          }
+        }
+      }
+    },
     "Prioritized": {
       "localizations": {
         "zh-Hans": {
@@ -3679,6 +3753,16 @@
         }
       }
     },
+    "Set Shortcut": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置快捷键"
+          }
+        }
+      }
+    },
     "Set up a keyboard shortcut to quickly access TypeFree from anywhere.": {
       "localizations": {
         "zh-Hans": {
@@ -3739,6 +3823,16 @@
         }
       }
     },
+    "Shortcut:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快捷键:"
+          }
+        }
+      }
+    },
     "Show Dock Icon": {
       "localizations": {
         "zh-Hans": {
@@ -3759,6 +3853,26 @@
         }
       }
     },
+    "Skip for now": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂时跳过"
+          }
+        }
+      }
+    },
+    "Skip Tour": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳过引导"
+          }
+        }
+      }
+    },
     "Sort alphabetically": {
       "localizations": {
         "zh-Hans": {
@@ -3775,6 +3889,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "声音反馈"
+          }
+        }
+      }
+    },
+    "Speak something": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说点什么"
           }
         }
       }
@@ -4467,6 +4591,16 @@
         }
       }
     },
+    "Works Everywhere on Mac with a click": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一键在 Mac 上任何地方使用"
+          }
+        }
+      }
+    },
     "You can only customize the trigger words for system prompts.": {
       "localizations": {
         "zh-Hans": {
@@ -4493,6 +4627,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "您的快捷键"
+          }
+        }
+      }
+    },
+    "Your Vibe-Coding Assistant": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您的编程助手"
+          }
+        }
+      }
+    },
+    "Your Writing Assistant": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您的写作助手"
           }
         }
       }
