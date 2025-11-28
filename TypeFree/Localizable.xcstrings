@@ -1338,7 +1338,6 @@
       }
     },
     "Debug" : {
-      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -4183,7 +4182,6 @@
       }
     },
     "Toggle Menu Bar Only" : {
-      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
